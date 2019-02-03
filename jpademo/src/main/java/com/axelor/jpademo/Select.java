@@ -4,26 +4,24 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        
-    	Student student=new Student(3, "Tushar Devkar");
-    	
+public class Select {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
     	EntityManagerFactory  managerFactory=Persistence.createEntityManagerFactory("jpapractice");
     	
     	
     	EntityManager manager=managerFactory.createEntityManager();
     	
-    	manager.getTransaction().begin();
+    	//manager.getTransaction().begin();
     	
-    	manager.persist(student);
+    	Student s=manager.find(Student.class, 1);
+    	System.out.println("Id is : "+s.getId()+" Student Name : "+s.getStudentName());
     	
-    	manager.getTransaction().commit();
-    }
+    	//manager.getTransaction().commit();
+
+	}
+
 }

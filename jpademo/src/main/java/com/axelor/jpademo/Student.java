@@ -14,6 +14,15 @@ public class Student {
 	
 	
 	
+	public void setId(int id) {
+		this.id = id;
+	}
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+	public Student() {
+		super();
+	}
 	public Student(int id, String studentName) {
 		super();
 		this.id = id;
@@ -22,8 +31,8 @@ public class Student {
 	public String getStudentName() {
 		return studentName;
 	}
-	public void setStudentName(String studentName) {
-		this.studentName = studentName;
+	public int getId() {
+		return id;
 	}
 	
 	
