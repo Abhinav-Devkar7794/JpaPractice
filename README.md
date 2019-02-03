@@ -1,0 +1,2 @@
+# JpaPractice
+All Jpa Concepts
